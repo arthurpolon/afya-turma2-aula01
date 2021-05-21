@@ -1,0 +1,148 @@
+// global styles
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Poppins, sans-serif;
+  color: #1D4044;
+}
+
+button {
+  background-color: #4FD1C5;
+  border: none;
+  color: #fff;
+
+  padding: 10px 20px;
+  font-weight: 700;
+  font-size: 1rem;
+
+  border-radius: 5px;
+
+  transition: 0.2s;
+
+  &:hover {
+    background: #60dbcf;
+  }
+}
+
+input {
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: solid 1px #38B2AC;
+
+  padding: 5px 10px;
+
+  color: #1D4044;
+
+  font-size: 1rem;
+
+  &::placeholder {
+    color: #A0AEC0;
+  }
+}
+
+
+// specific styles
+.app-container {
+  max-width: 50%;
+  margin: 20px auto;
+
+  display: flex;
+  flex-direction: column;
+
+  .chuck-jokes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0 auto;
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+    }
+
+    p {
+      text-align: center;
+      max-width: 600px;
+      margin-bottom: 20px;
+    }
+
+    button {
+      margin-bottom: 30px;
+    }
+  }
+
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h3 {
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      input {
+        margin-bottom: 30px;
+
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+      }
+
+      &:first-child {
+        margin-top: 30px;
+      }
+
+      button {
+        margin-bottom: 30px;
+      }
+    }
+
+    .info {
+      color: #38B2AC;
+    }
+  }
+}
+
+footer {
+  position: fixed;
+  bottom: 5px;
+  right: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  min-width: 150px;
+
+  .links {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    a {
+      color: #285E61;
+    }
+  }
+}

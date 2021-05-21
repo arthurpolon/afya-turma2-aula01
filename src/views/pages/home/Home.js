@@ -13,26 +13,27 @@ let Home = {
       const joke = await getRandomJoke();
 
       let view = /*html*/ `
-      <div class="container">
+      <div class="app-container">
         <div class="chuck-jokes">
-            <h1>Chuck Norris</h1>
+            <h1>Chuck Norris Jokes</h1>
             <p id="joke-display">${joke.value}</p>
             <button id="update-button">Update Joke</button>
         </div>
         <hr />
         <div class="form-container">
+            <h3>Simple Form</h3>
             <form>
                 <input type="text" id="name" placeholder="Name *" required />
                 <input type="text" id="email" placeholder="Email *" required />
-                <input type="text" id="phone" placeholder="Phone *" required/>
-                <input type="submit" id="submit" value="Submit" required />
+                <input type="number" step="none" id="phone" placeholder="Phone *" required/>
+                <button type="submit" id="submit">Submit</button>
             </form>
             <div class="info"></div>
         </div>
     </div>
     <footer>
       <h3>Arthur Polon</h3>
-      <div id="links">
+      <div class="links">
         <a href="https://github.com/arthurpolon" target="__blank">Github</a>
         <a href="https://www.linkedin.com/in/arthur-polon-55a3b420a/" target="__blank">LinkedIn</a>
       </div>
@@ -66,15 +67,18 @@ let Home = {
          postForm
             .post("", data)
             .then(() => {
-               infoDisplay.textContent = "Submitted Successfully";
+               infoDisplay.textContent = "Submitted Successfully.";
                setTimeout(() => {
                   infoDisplay.textContent = "";
                }, 3000);
             })
             .catch((e) => {
                infoDisplay.textContent =
-                  "Something went wrong. Console.log for more";
+                  "Something went wrong. Check console for further informations.";
                console.log(e);
+               setTimeout(() => {
+                  infoDisplay.textContent = "";
+               }, 5000);
             });
       });
 
