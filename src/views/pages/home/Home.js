@@ -71,6 +71,7 @@ let Home = {
                setTimeout(() => {
                   infoDisplay.textContent = "";
                }, 3000);
+               e.target.reset()
             })
             .catch((e) => {
                infoDisplay.textContent =
